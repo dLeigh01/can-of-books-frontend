@@ -1,7 +1,7 @@
 # Can of Books
 
 **Author**: Dana
-**Version**: 1.0.0
+**Version**: 1.0.2
 
 ## Overview
 
@@ -17,7 +17,8 @@ react, javascript, css, axios
 
 ## Change Log
 
-05-23-2022
+05-23-2022 6:20pm - Got data from server, built carousel
+05-23-2022 7:59pm - got routes working
 
 ## Estimates
 
@@ -32,8 +33,8 @@ react, javascript, css, axios
    - Name: Build Book Component
    - Estimated Time: 1 hr
    - Start: May 23, 2022 5:30pm-6:20pm
-   - End: May 23, 2022
-   - Actual Time:
+   - End: May 23, 2022 7:35pm-7:58pm
+   - Actual Time: 1 hr 13 min
 
 ## Credit and Collaborations
 
