@@ -1,7 +1,7 @@
 # Can of Books
 
 **Author**: Dana
-**Version**: 1.0.0
+**Version**: 1.0.2
 
 ## Overview
 
@@ -17,23 +17,36 @@ react, javascript, css, axios
 
 ## Change Log
 
-05-23-2022
+05-23-2022 6:20pm - Got data from server, built carousel
+05-23-2022 7:59pm - got routes working
 
 ## Estimates
 
-Name of feature:
+1. Feature Task #1
+   - Name: Set up repos
+   - Estimated Time: 1 hr
+   - Start: May 23, 2022 3:00pm
+   - End: May 23, 2022 3:45pm
+   - Actual Time: 45 min
 
-Estimate of time needed to complete:
-
-Start time:
-
-Finish time:
-
-Actual time needed to complete:
+2. Feature Task #3
+   - Name: Build Book Component
+   - Estimated Time: 1 hr
+   - Start: May 23, 2022 5:30pm-6:20pm
+   - End: May 23, 2022 7:35pm-7:58pm
+   - Actual Time: 1 hr 13 min
 
 ## Credit and Collaborations
 
+### Credit
+
 This app was created with [Benjamin Small](https://github.com/BenjaminSmall94)
+
+[Bootstrap-Carousel Citation](https://react-bootstrap.github.io/components/carousel/)
+
+[ComponentDidMount](https://medium.com/@felippenardi/how-to-do-componentdidmount-with-react-hooks-553ba39d1571)
+
+### Work Agreement
 
 - Logistical
   - What hours will you be available to communicate? 9am-9pm
