@@ -21,19 +21,31 @@ react, javascript, css, axios
 
 ## Estimates
 
-Name of feature:
+1. Feature Task #1
+   - Name: Set up repos
+   - Estimated Time: 1 hr
+   - Start: May 23, 2022 3:00pm
+   - End: May 23, 2022 3:45pm
+   - Actual Time: 45 min
 
-Estimate of time needed to complete:
-
-Start time:
-
-Finish time:
-
-Actual time needed to complete:
+2. Feature Task #3
+   - Name: Build Book Component
+   - Estimated Time: 1 hr
+   - Start: May 23, 2022 5:30pm-6:20pm
+   - End: May 23, 2022
+   - Actual Time:
 
 ## Credit and Collaborations
 
+### Credit
+
 This app was created with [Benjamin Small](https://github.com/BenjaminSmall94)
+
+[Bootstrap-Carousel Citation](https://react-bootstrap.github.io/components/carousel/)
+
+[ComponentDidMount](https://medium.com/@felippenardi/how-to-do-componentdidmount-with-react-hooks-553ba39d1571)
+
+### Work Agreement
 
 - Logistical
   - What hours will you be available to communicate? 9am-9pm
