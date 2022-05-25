@@ -40,6 +40,10 @@ class BestBooks extends React.Component {
     });
   }
 
+  // handleDelete = (event) => {
+  //   console.log(event.target);
+  // }
+
   render() {
 
     /* TODO: render all the books in a Carousel */
@@ -49,6 +53,7 @@ class BestBooks extends React.Component {
           <Carousel.Caption>
             <h5>{bookObj.title}</h5>
             <p>{bookObj.description}</p>
+            <Button onClick={this.handleDelete}>Delete</Button>
           </Carousel.Caption>
           <img src="https://images-na.ssl-images-amazon.com/images/I/41gHG-a2OEL._SX331_BO1,204,203,200_.jpg" alt="movie cover art" />
         </Carousel.Item>
