@@ -1,7 +1,7 @@
 # Can of Books
 
 **Authors**: Dana Huffman, Benjamin Small
-**Version**: 1.1.2
+**Version**: 1.2.0
 
 ## Overview
 
@@ -21,6 +21,7 @@ react, javascript, css, axios
 05-23-2022 7:59pm - Got routes working
 05-24-2022 5:23pm - Created the user interface to create new books and upload them to the database
 05-24-2022 8:04pm - Completed work on delete function
+05-25-2022 3:29pm - Completed updateBooks for front end and made minor css changes
 
 ## Estimates
 
@@ -53,6 +54,15 @@ react, javascript, css, axios
    - Start: May 24, 2022 5:30pm-6:15pm
    - End: May 24, 2022 7:01pm-8:03pm
    - Actual Time: 1 hr 45 min
+
+### Day 3
+
+1. Feature Task #1
+   - Name: Create an updateBook method and user interface.
+   - Estimated Time: 1 hr 20 min
+   - Start: May 25, 2022 1:40pm
+   - End: May 25, 2022 3:29pm
+   - Actual Time: 1 hr 50 min
 
 ## Credit and Collaborations
 
