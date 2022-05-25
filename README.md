@@ -1,6 +1,6 @@
 # Can of Books
 
-**Author**: Dana
+**Authors**: Dana Huffman, Benjamin Small
 **Version**: 1.0.2
 
 ## Overview
@@ -48,13 +48,15 @@ react, javascript, css, axios
 
 ## Credit and Collaborations
 
-### Credit
+### Author GitHubs
 
-This app was created with [Benjamin Small](https://github.com/BenjaminSmall94)
+- [Benjamin Small](https://github.com/BenjaminSmall94)
+- [Dana Huffman](https://github.com/dLeigh01)
 
-[Bootstrap-Carousel Citation](https://react-bootstrap.github.io/components/carousel/)
+### Credit/Citations
 
-[ComponentDidMount](https://medium.com/@felippenardi/how-to-do-componentdidmount-with-react-hooks-553ba39d1571)
+- [Bootstrap-Carousel Citation](https://react-bootstrap.github.io/components/carousel/)
+- [ComponentDidMount](https://medium.com/@felippenardi/how-to-do-componentdidmount-with-react-hooks-553ba39d1571)
 
 ### Work Agreement
 
