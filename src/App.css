@@ -1,7 +1,21 @@
 .carousel {
   background-color: gray;
+  width: 50rem;
+  margin: 0 auto;
 }
 
 img {
-  margin-left: 41%;
+  height: 600px;
+}
+
+h2 {
+  text-align: center;
+}
+
+#root {
+  text-align: center;
+}
+
+.btn {
+  margin: 5px;
 }

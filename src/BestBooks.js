@@ -4,13 +4,16 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import BookFormModal from './BookFormModal';
 import Book from './Book.js';
+import UpdateModal from './UpdateModal';
 
 class BestBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       books: [],
-      modalDisplaying: false,
+      createModalDisplaying: false,
+      updateModalDisplaying: false,
+      bookToUpdate: {},
     };
   }
 
@@ -29,16 +32,48 @@ class BestBooks extends React.Component {
     });
   }
 
-  openBookForm = () => {
+  openCreateBookForm = () => {
     this.setState({
-      modalDisplaying: true,
+      createModalDisplaying: true,
     });
   }
 
-  hideModal = () => {
+  openUpdateBookForm = (bookObj) => {
     this.setState({
-      modalDisplaying: false,
+      updateModalDisplaying: true,
+      bookToUpdate: bookObj,
     });
+  }
+
+  hideCreateModal = () => {
+    this.setState({
+      createModalDisplaying: false,
+    });
+  }
+
+  hideUpdateModal = () => {
+    this.setState({
+      updateModalDisplaying: false,
+    });
+  }
+
+  handleUpdate = async (bookObj) => {
+    try {
+      const updatedBooks = this.state.books.map(existingBook => {
+        if (existingBook._id === bookObj._id) {
+          return bookObj;
+        } else {
+          return existingBook;
+        }
+      });
+      // console.log(updatedBooks);
+      await axios.put(`${process.env.REACT_APP_SERVER}/books/${bookObj._id}`, bookObj);
+      this.setState({
+        books: updatedBooks,
+      });
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   handleDelete = async (bookId) => {
@@ -59,6 +94,7 @@ class BestBooks extends React.Component {
         <Carousel.Item key={bookObj._id}>
           <Book
             bookObj={bookObj}
+            showUpdate={this.openUpdateBookForm}
             onDelete={this.handleDelete}
           />
         </Carousel.Item>
@@ -78,8 +114,18 @@ class BestBooks extends React.Component {
         ) : (
           <h3>No Books Found :(</h3>
         )}
-        <Button onClick={this.openBookForm}>Add Books</Button>
-        <BookFormModal hideModal={this.hideModal} createBook={this.createBook} modalDisplaying={this.state.modalDisplaying}/>
+        <Button onClick={this.openCreateBookForm}>Add Books</Button>
+        <BookFormModal
+          hideModal={this.hideCreateModal}
+          createBook={this.createBook}
+          modalDisplaying={this.state.createModalDisplaying}
+        />
+        <UpdateModal
+          hideModal={this.hideUpdateModal}
+          modalDisplaying={this.state.updateModalDisplaying}
+          updateBook={this.handleUpdate}
+          bookToUpdate={this.state.bookToUpdate}
+        />
       </>
     );
   }
