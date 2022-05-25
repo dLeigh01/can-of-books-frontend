@@ -66,7 +66,6 @@ class BestBooks extends React.Component {
           return existingBook;
         }
       });
-      // console.log(updatedBooks);
       await axios.put(`${process.env.REACT_APP_SERVER}/books/${bookObj._id}`, bookObj);
       this.setState({
         books: updatedBooks,
