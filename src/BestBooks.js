@@ -1,20 +1,42 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import BookFormModal from './BookFormModal';
 
 class BestBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      books: [],
+      modalDisplaying: false,
     };
   }
 
-  // Not sure if we can use componentDidMount as arrow function
   componentDidMount = async () => {
     let incomingBooks = await axios.get(`${process.env.REACT_APP_SERVER}/books`);
     this.setState({
       books: incomingBooks.data,
+    });
+  }
+
+  createBook = async (bookInfo) => {
+    const response = await axios.post(`${process.env.REACT_APP_SERVER}/books`, bookInfo);
+    const newBook = response.data;
+    this.setState({
+      books: [...this.state.books, newBook],
+    });
+  }
+
+  openBookForm = () => {
+    this.setState({
+      modalDisplaying: true,
+    });
+  }
+
+  hideModal = () => {
+    this.setState({
+      modalDisplaying: false,
     });
   }
 
@@ -23,7 +45,7 @@ class BestBooks extends React.Component {
     /* TODO: render all the books in a Carousel */
     let booksArr = this.state.books.map(bookObj => {
       return (
-        <Carousel.Item>
+        <Carousel.Item key={bookObj._id}>
           <Carousel.Caption>
             <h5>{bookObj.title}</h5>
             <p>{bookObj.description}</p>
@@ -38,12 +60,16 @@ class BestBooks extends React.Component {
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
         {this.state.books.length ? (
-          <Carousel>
-            {booksArr}
-          </Carousel>
+          <>
+            <Carousel>
+              {booksArr}
+            </Carousel>
+          </>
         ) : (
           <h3>No Books Found :(</h3>
         )}
+        <Button onClick={this.openBookForm}>Add Books</Button>
+        <BookFormModal hideModal={this.hideModal} createBook={this.createBook} modalDisplaying={this.state.modalDisplaying}/>
       </>
     );
   }

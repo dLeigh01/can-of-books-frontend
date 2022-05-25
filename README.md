@@ -36,6 +36,15 @@ react, javascript, css, axios
    - End: May 23, 2022 7:35pm-7:58pm
    - Actual Time: 1 hr 13 min
 
+### Day 2
+
+1. Feature Task #1
+   - Name: Create a postBook method and user interface.
+   - Estimated Time: 1 hr
+   - Start: May 24, 2022 3:45pm
+   - End: May 24, 2022 5:20pm
+   - Actual Time: 1 hr 25 min
+
 ## Credit and Collaborations
 
 ### Credit
