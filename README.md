@@ -1,7 +1,7 @@
 # Can of Books
 
-**Author**: Dana
-**Version**: 1.0.2
+**Authors**: Dana Huffman, Benjamin Small
+**Version**: 1.1.2
 
 ## Overview
 
@@ -18,7 +18,9 @@ react, javascript, css, axios
 ## Change Log
 
 05-23-2022 6:20pm - Got data from server, built carousel
-05-23-2022 7:59pm - got routes working
+05-23-2022 7:59pm - Got routes working
+05-24-2022 5:23pm - Created the user interface to create new books and upload them to the database
+05-24-2022 8:04pm - Completed work on delete function
 
 ## Estimates
 
@@ -36,15 +38,33 @@ react, javascript, css, axios
    - End: May 23, 2022 7:35pm-7:58pm
    - Actual Time: 1 hr 13 min
 
+### Day 2
+
+1. Feature Task #1
+   - Name: Create a postBook method and user interface.
+   - Estimated Time: 1 hr
+   - Start: May 24, 2022 3:45pm
+   - End: May 24, 2022 5:20pm
+   - Actual Time: 1 hr 25 min
+
+2. Feature Task #2
+   - Name: Create a deleteBook method and user interface.
+   - Estimated Time: 1 hr
+   - Start: May 24, 2022 5:30pm-6:15pm
+   - End: May 24, 2022 7:01pm-8:03pm
+   - Actual Time: 1 hr 45 min
+
 ## Credit and Collaborations
 
-### Credit
+### Author GitHubs
 
-This app was created with [Benjamin Small](https://github.com/BenjaminSmall94)
+- [Benjamin Small](https://github.com/BenjaminSmall94)
+- [Dana Huffman](https://github.com/dLeigh01)
 
-[Bootstrap-Carousel Citation](https://react-bootstrap.github.io/components/carousel/)
+### Credit/Citations
 
-[ComponentDidMount](https://medium.com/@felippenardi/how-to-do-componentdidmount-with-react-hooks-553ba39d1571)
+- [Bootstrap-Carousel Citation](https://react-bootstrap.github.io/components/carousel/)
+- [ComponentDidMount](https://medium.com/@felippenardi/how-to-do-componentdidmount-with-react-hooks-553ba39d1571)
 
 ### Work Agreement
 
