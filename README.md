@@ -1,7 +1,7 @@
 # Can of Books
 
 **Authors**: Dana Huffman, Benjamin Small
-**Version**: 1.1.1
+**Version**: 1.1.2
 
 ## Overview
 
@@ -20,6 +20,7 @@ react, javascript, css, axios
 05-23-2022 6:20pm - Got data from server, built carousel
 05-23-2022 7:59pm - Got routes working
 05-24-2022 5:23pm - Created the user interface to create new books and upload them to the database
+05-24-2022 8:04pm - Completed work on delete function
 
 ## Estimates
 
@@ -45,6 +46,13 @@ react, javascript, css, axios
    - Start: May 24, 2022 3:45pm
    - End: May 24, 2022 5:20pm
    - Actual Time: 1 hr 25 min
+
+2. Feature Task #2
+   - Name: Create a deleteBook method and user interface.
+   - Estimated Time: 1 hr
+   - Start: May 24, 2022 5:30pm-6:15pm
+   - End: May 24, 2022 7:01pm-8:03pm
+   - Actual Time: 1 hr 45 min
 
 ## Credit and Collaborations
 

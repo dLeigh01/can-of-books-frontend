@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import BookFormModal from './BookFormModal';
+import Book from './Book.js';
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -40,22 +41,26 @@ class BestBooks extends React.Component {
     });
   }
 
-  // handleDelete = (event) => {
-  //   console.log(event.target);
-  // }
+  handleDelete = async (bookId) => {
+    const url = `${process.env.REACT_APP_SERVER}/books/${bookId}`;
+    try {
+      await axios.delete(url);
+      const filteredBooks = this.state.books.filter(book => bookId !== book._id);
+      this.setState({books: filteredBooks});
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   render() {
 
-    /* TODO: render all the books in a Carousel */
     let booksArr = this.state.books.map(bookObj => {
       return (
         <Carousel.Item key={bookObj._id}>
-          <Carousel.Caption>
-            <h5>{bookObj.title}</h5>
-            <p>{bookObj.description}</p>
-            <Button onClick={this.handleDelete}>Delete</Button>
-          </Carousel.Caption>
-          <img src="https://images-na.ssl-images-amazon.com/images/I/41gHG-a2OEL._SX331_BO1,204,203,200_.jpg" alt="movie cover art" />
+          <Book
+            bookObj={bookObj}
+            onDelete={this.handleDelete}
+          />
         </Carousel.Item>
       );
     });
