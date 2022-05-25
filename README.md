@@ -18,7 +18,8 @@ react, javascript, css, axios
 ## Change Log
 
 05-23-2022 6:20pm - Got data from server, built carousel
-05-23-2022 7:59pm - got routes working
+05-23-2022 7:59pm - Got routes working
+05-24-2022 5:23pm - Created the user interface to create new books and upload them to the database
 
 ## Estimates
 
